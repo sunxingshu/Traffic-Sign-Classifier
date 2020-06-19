@@ -27,7 +27,7 @@ The steps of this project are the following:
 [image7]: ./online/general.png "Random Noise"
 [image8]: ./online/30.png "Random Noise"
 [image9]: ./download.png "Random Noise"
-
+[image10]: ./online/60.png "Random Noise"
 
 ### Data Set Summary & Exploration
 
@@ -91,9 +91,9 @@ BATCH_SIZE = 128
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy of 98.9%
-* validation set accuracy of 97% 
-* test set accuracy of 95.4%
+* training set accuracy of 99.1%
+* validation set accuracy of 96.8% 
+* test set accuracy of 95.3%
 
 If a well known architecture was chosen:
 * What architecture was chosen?
@@ -108,12 +108,17 @@ It has >93% on validation
 
 #### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-Here are five German traffic signs that I found on the web:
+Here are six German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+| Image.    		    |    Difficulty 	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| ![alt text][image4]   | Easy  			                		    | 
+| ![alt text][image5]   | Easy  			                		    | 
+| ![alt text][image6]   | Easy  			                		    | 
+| ![alt text][image7]   | Easy  			                		    | 
+| ![alt text][image8]   | Easy  			                		    | 
+| ![alt text][image10]  | Difficult since covered by snow    			|
 
-These five sighs should be easily classified since the feature in these images are quite clear. I have confidence my model can predict tthis.
 
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
@@ -127,9 +132,9 @@ Here are the results of the prediction:
 | Go straight or left	| Go straight or left							|
 | General caution	    | General caution					 			|
 | Speed limit (30km/h)	| Speed limit (30km/h)      					|
+| Speed limit (60km/h)	| Ahead only    					|
 
-
-The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of 95.4%.
+The model was able to correctly guess 5 of the 6 traffic signs, which gives an accuracy of 83%. This is lower than the 95.4% of the test set.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
@@ -139,11 +144,11 @@ The code for making predictions on my final model is located in the 11th cell of
 | Probability		    |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 100%	                | Go straight or left   					    | 
-| 99%	                | Bumpy road									|
+| 100%	                | Bumpy road									|
 | 100%	                | Go straight or left							|
 | 100%	                | General caution					 			|
 | 100%	                | Speed limit (30km/h)      					|
-
+| 0%	                | Speed limit (60km/h)      					|
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
